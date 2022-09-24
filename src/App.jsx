@@ -6,6 +6,8 @@ import Loader from "./components/loader/Loader";
 import Sidebar from "./components/sidebar/Sidebar";
 import LoginPage from "./pages/Login/Login";
 import useLoaderStore from "./store/loader";
+import RequireAuth from "./helpers/RequiredAuth";
+
 
 let routes = [
 	{
@@ -35,13 +37,15 @@ const App = () => {
 				<Route path="login" element={<LoginPage />} />
 
 				<Route element={<SidebarLayout routes={routes} />}>
-					<Route path="/">
-						<Route index element={<HomePage />} />
-						<Route path='sub' element={<SubHomePage />} />
+					<Route element={<RequireAuth />}>
+						<Route path="/">
+							<Route index element={<HomePage />} />
+							<Route path="sub" element={<SubHomePage />} />
+						</Route>
+						<Route path="about" element={<AboutPage />} />
+						<Route path="unauthorized" element={<LoginPage />} />
+						<Route path="*" element={<LoginPage />} />
 					</Route>
-					<Route path="about" element={<AboutPage />} />
-					<Route path="unauthorized" element={<LoginPage />} />
-					<Route path="*" element={<LoginPage />} />
 				</Route>
 			</Routes>
 		</>
