@@ -1,0 +1,41 @@
+div.content__404 {
+	/* margin-left: px; */
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	/* padding: 1px 16px; */
+	/* height: 1000px; */
+	/* background-image: url('../../assets/bg.jpg'); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 665px;
+}
+@-webkit-keyframes typing {
+	from {
+		width: 0;
+	}
+}
+@-webkit-keyframes blink-caret {
+	50% {
+		border-color: transparent;
+	}
+}
+
+.text__404 {
+	font: bold 300% Consolas, Monaco, monospace;
+
+	border-right: 0.1em solid #f7931e;
+	color: #f7931e;
+	font-weight: bolder;
+	width: 16.5em;
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end),
+		blink-caret 0.5s step-end infinite alternate;
+}
+
+.text {
+	text-align: center;
+}
