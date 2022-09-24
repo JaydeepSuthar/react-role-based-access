@@ -1,0 +1,84 @@
+// @import "react-pro-sidebar/dist/scss/styles.scss";
+$orange: #f7931e;
+
+// .sidebar, .content {
+// 	height: 100vh;
+// }
+.nav-tabs .nav-link {
+	color: gray;
+}
+
+.nav-tabs .nav-link:hover {
+	color: gray;
+}
+
+.nav-tabs .nav-link.active {
+	color: $orange !important;
+	background-color: #fff;
+	border-color: #dee2e6 #dee2e6 #fff;
+}
+
+td {
+	padding-right: 10px;
+}
+
+.label {
+	font-weight: 500;
+}
+
+th {
+	max-width: 300px;
+	width: 250px;
+}
+
+tr {
+	border-top: hidden;
+}
+
+// * Card
+
+.card-title {
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.box {
+	padding: 20px 10px;
+	height: 150px !important;
+}
+.count-numbers {
+	line-height: -4;
+	// padding: -20px;
+	font-size: 50px;
+	font-weight: bold;
+}
+.month {
+	margin-left: auto !important;
+	width: 170px;
+	height: auto !important;
+}
+.month2 {
+	// border: 2px solid #f7931e;
+	border: 2px solid transparent;
+	color: #333;
+
+	outline: none;
+}
+
+.orange {
+	background-color: #ff9800;
+}
+
+
+
+
+	.fsWzwg {
+		height: 32px;
+		width: 154px !important;
+		border-radius: 3px !important;
+		border: 1px solid #e5e5e5;
+		padding: 0 0px 0 9px !important;
+		
+	}
+  
