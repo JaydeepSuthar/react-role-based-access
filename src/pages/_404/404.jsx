@@ -1,12 +1,13 @@
 import "./404.css";
-import error from "../../assets/404.gif";
+// import error from "../../assets/404.gif";
+import error from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const _404 = () => {
 	return (
 		<>
 			<div className="content__404 me-auto ">
-				<img src={error} alt="" className="error " srcset="" />
+				<img src={error} alt="" className="error " srcSet="" />
 				<div className="typing-slider">
 					<h2 className="text__404 text m-auto">Page Not Found...</h2>
 				</div>

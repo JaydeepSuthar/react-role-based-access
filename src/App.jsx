@@ -4,10 +4,12 @@ import { Link, Outlet, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Loader from "./components/loader/Loader";
 import Sidebar from "./components/sidebar/Sidebar";
-import LoginPage from "./pages/Login/Login";
-import useLoaderStore from "./store/loader";
 import RequireAuth from "./helpers/RequiredAuth";
-
+import RequireRoleAuth from "./helpers/RequiredRoleAuth";
+import LoginPage from "./pages/Login/Login";
+import Unauthorized from "./pages/Unauthorized";
+import _404 from "./pages/_404/404";
+import useLoaderStore from "./store/loader";
 
 let routes = [
 	{
@@ -23,6 +25,11 @@ let routes = [
 		icon: <FaHome />,
 		path: "/about",
 	},
+	{
+		name: "Not Found",
+		icon: <FaHome />,
+		path: "/not-found",
+	},
 ];
 
 const App = () => {
@@ -34,17 +41,25 @@ const App = () => {
 			<Loader visible={isLoading} />
 
 			<Routes>
+				{/* Public Routes */}
 				<Route path="login" element={<LoginPage />} />
+				<Route path="unauthorized" element={<Unauthorized />} />
+				<Route path="*" element={<_404 />} />
 
+				{/* Private Routes */}
 				<Route element={<SidebarLayout routes={routes} />}>
 					<Route element={<RequireAuth />}>
 						<Route path="/">
 							<Route index element={<HomePage />} />
 							<Route path="sub" element={<SubHomePage />} />
 						</Route>
-						<Route path="about" element={<AboutPage />} />
-						<Route path="unauthorized" element={<LoginPage />} />
-						<Route path="*" element={<LoginPage />} />
+
+						{/* ROLE BASED ACCESS */}
+						<Route
+							element={<RequireRoleAuth allowedRoles={[8000]} />}
+						>
+							<Route path="about" element={<AboutPage />} />
+						</Route>
 					</Route>
 				</Route>
 			</Routes>
