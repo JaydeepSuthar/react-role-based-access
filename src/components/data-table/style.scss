@@ -1,0 +1,37 @@
+// Use this Classes to override React-Data-Table-Component Styles
+
+// * Custom SCSS Vairables
+$borderClr: rgb(224, 224, 224);
+$paddingSize: 2.5px;
+
+// .rdt_Table
+
+.rdt_TableRow {
+	border-bottom: 1px solid $borderClr;
+	padding-top: $paddingSize;
+	padding-bottom: $paddingSize;
+}
+
+// .rdt_TableCol
+
+// .rdt_TableCol_Sortable
+
+// .rdt_TableCell
+
+.rdt_TableHeader {
+	div {
+		font-weight: 500;
+		font-size: xx-large;
+	}
+}
+
+// .rdt_TableFooter
+
+// .rdt_TableHead
+
+.rdt_TableHeadRow {
+	font-weight: bolder;
+}
+// .rdt_TableBody
+
+// .rdt_ExpanderRow
