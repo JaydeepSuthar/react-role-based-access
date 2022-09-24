@@ -80,6 +80,7 @@ const Sidebar = ({ routes }) => {
 							if (route.routes) {
 								return (
 									<SubMenu
+										key={route.name}
 										title={route.name}
 										icon={route.icon}
 										className={
@@ -92,6 +93,7 @@ const Sidebar = ({ routes }) => {
 												return (
 													<SubMenu
 														// title={route.name}
+														key={subRoute.name}
 														title={subRoute.name}
 														// icon={route.icon}
 														className={
@@ -106,7 +108,9 @@ const Sidebar = ({ routes }) => {
 																idx
 															) => (
 																<MenuItem
-																	key={`super-sub-route-${idx}`}
+																	key={
+																		subSubRoute.name
+																	}
 																	className={
 																		activeLink ===
 																			subSubRoute.path &&
@@ -164,7 +168,7 @@ const Sidebar = ({ routes }) => {
 
 											return (
 												<MenuItem
-													key={`sub-route-${idx}`}
+													key={subRoute.name}
 													className={
 														activeLink ===
 															subRoute.path &&
@@ -207,7 +211,7 @@ const Sidebar = ({ routes }) => {
 
 							return (
 								<MenuItem
-									key={`route-${idx}`}
+									key={route.name}
 									icon={route.icon}
 									className={
 										activeLink === route.path &&

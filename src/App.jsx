@@ -35,7 +35,10 @@ const App = () => {
 				<Route path="login" element={<LoginPage />} />
 
 				<Route element={<SidebarLayout routes={routes} />}>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/">
+						<Route index element={<HomePage />} />
+						<Route path='sub' element={<SubHomePage />} />
+					</Route>
 					<Route path="about" element={<AboutPage />} />
 					<Route path="unauthorized" element={<LoginPage />} />
 					<Route path="*" element={<LoginPage />} />

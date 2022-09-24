@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
-import AuthContext from "../../context/AuthProvider";
+import { useAuth } from "../../hooks";
 import { login as serverLogin } from "../../mock/login";
 
 const LoginPage = () => {
-	const { setAuth } = useContext(AuthContext);
+	const { setAuth } = useAuth();
 
 	const navigate = useNavigate();
 	const location = useLocation();
