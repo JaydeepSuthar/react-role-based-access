@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Unauthorized = () => {
+const UnauthorizedPage = () => {
 	return (
 		<>
 			<h1>Sorry But You Don't Have Access to This Page</h1>
@@ -13,4 +13,4 @@ const Unauthorized = () => {
 	);
 };
 
-export default Unauthorized;
+export default UnauthorizedPage;

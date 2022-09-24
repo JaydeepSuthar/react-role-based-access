@@ -7,7 +7,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import RequireAuth from "./helpers/RequiredAuth";
 import RequireRoleAuth from "./helpers/RequiredRoleAuth";
 import LoginPage from "./pages/Login/Login";
-import Unauthorized from "./pages/Unauthorized";
+import LogoutPage from "./pages/Logout/Logout";
+import UnauthorizedPage from "./pages/Unauthorized/Unauthorized";
 import _404 from "./pages/_404/404";
 import useLoaderStore from "./store/loader";
 
@@ -43,7 +44,8 @@ const App = () => {
 			<Routes>
 				{/* Public Routes */}
 				<Route path="login" element={<LoginPage />} />
-				<Route path="unauthorized" element={<Unauthorized />} />
+				<Route path="logout" element={<LogoutPage />} />
+				<Route path="unauthorized" element={<UnauthorizedPage />} />
 				<Route path="*" element={<_404 />} />
 
 				{/* Private Routes */}

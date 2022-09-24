@@ -12,23 +12,20 @@ const _404 = () => {
 					<h2 className="text__404 text m-auto">Page Not Found...</h2>
 				</div>
 
-				<button
-					className="back__to__home__btn"
-					style={{
-						backgroundColor: "#f7931e",
-						padding: "10px",
-						borderRadius: "5px",
-						border: "none",
-						marginTop: "20px",
-					}}
-				>
-					<Link
-						style={{ textDecoration: "none", color: "white" }}
-						to="/"
+				<Link style={{ textDecoration: "none", color: "white" }} to="/">
+					<button
+						className="back__to__home__btn"
+						style={{
+							backgroundColor: "#f7931e",
+							padding: "10px",
+							borderRadius: "5px",
+							border: "none",
+							marginTop: "20px",
+						}}
 					>
 						Back to Home
-					</Link>
-				</button>
+					</button>
+				</Link>
 			</div>
 		</>
 	);
